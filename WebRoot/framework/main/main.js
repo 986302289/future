@@ -45,22 +45,38 @@ var leftVm=new Vue({
 	        }
 	      };
 	},
-	watch: {
+	
+	 watch: {
 	      filterText(val) {
 	        this.$refs.tree2.filter(val);
 	      }
 	    },
 
-    methods: {
-      filterNode(value, data) {
-    	  alert();
-    	  $("#iframecon").attr({
-				src : key
-			});
-        if (!value) return true;
-        return data.label.indexOf(value) !== -1;
-      }
-    }
+	    methods: {
+	      filterNode(value, data) {
+	        if (!value) return true;
+	        return data.label.indexOf(value) !== -1;
+	      },
+	      handleNodeClick(data) {
+  	        console.log(data);
+  	      }
+  	    }
+
+//    methods: {
+//      filterNode:function(value, data) {
+//    	  alert();
+////    	  $("#iframecon").attr({
+////				src : key
+////			});
+//        if (!value) return true;
+//        return data.label.indexOf(value) !== -1;
+//      }
+//    },
+//    	filterNode(value, data) {
+//            if (!value) return true;
+//            return data.label.indexOf(value) !== -1;
+//          },
+    	      
 });
 
 /**

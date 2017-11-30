@@ -20,15 +20,15 @@
 			  v-model="filterText">
 			</el-input>
 			
-			<el-tree 
+			<el-tree
 			  class="filter-tree bg"
 			  :data="data2"
 			  :props="defaultProps"
 			  accordion
 			  :filter-node-method="filterNode"
+			  @node-click="handleNodeClick"
 			  ref="tree2">
 			</el-tree>
-		
 		</div>
 		<div class="a2">
 			<iframe src="<%=request.getContextPath()%>/ueditor/index.html"id="iframecon" name="iframepage" class="iframe"
