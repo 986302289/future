@@ -1,64 +1,67 @@
-var mainVm=new Vue({
-			el : '#mainapp',
-			data : function() {
-				 return {
-				        activeIndex: '1',
-				        activeIndex2: '1'
-				      };
-			},
-			methods : {
-				handleSelect(key, keyPath) {
-			        console.log(key, keyPath);
-			      },
-				handleOpen : function(key, keyPath) {
-					console.log(key, keyPath);
-				},
-				handleClose : function(key, keyPath) {
-					console.log(key, keyPath);
-				},
-				onclickMenu : function(key, keyPath) {
-					alert();
-					$("#iframecon").attr({
-						src : key
-					});
-				},
-				open:function() {
-			        const h = this.$createElement;
 
-			        this.$notify({
-			          title: '标题名称',
-			          message: h('i', { style: 'color: teal'}, '这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案')
-			        });
-			      },
+var leftVm=new Vue({
+	el : '#leftContent',
+	data : function() {
+		return {
+	        filterText: '',
+	        data2: [{
+	          id: 1,
+	          label: '一级 1',
+	          children: [{
+	            id: 4,
+	            label: '二级 1-1',
+	            children: [{
+	              id: 9,
+	              label: '三级 1-1-1'
+	            }, {
+	              id: 10,
+	              label: '三级 1-1-2'
+	            }]
+	          }]
+	        }, {
+	          id: 2,
+	          label: '一级 2',
+	          children: [{
+	            id: 5,
+	            label: '二级 2-1'
+	          }, {
+	            id: 6,
+	            label: '二级 2-2'
+	          }]
+	        }, {
+	          id: 3,
+	          label: '一级 3',
+	          children: [{
+	            id: 7,
+	            label: '二级 3-1'
+	          }, {
+	            id: 8,
+	            label: '二级 3-2'
+	          }]
+	        }],
+	        defaultProps: {
+	          children: 'children',
+	          label: 'label'
+	        }
+	      };
+	},
+	watch: {
+	      filterText(val) {
+	        this.$refs.tree2.filter(val);
+	      }
+	    },
 
-			      open2:function() {
-			        this.$notify({
-			          title: '提示',
-			          message: '这是一条不会自动关闭的消息',
-			          duration: 0
-			        });
-			      },
-			      open3:function(bt,nr) {
-			    	  this.$confirm('此操作将永久删除该文件, 是否继续?', bt, {
-			              confirmButtonText: '确定',
-			              cancelButtonText: '取消',
-			              type: 'warning'
-			            }).then(() => {
-			              this.$message({
-			                type: 'success',
-			                message: '删除成功!'
-			              });
-			            }).catch(() => {
-			              this.$message({
-			                type: 'info',
-			                message: '已取消删除'
-			              }); 
-			            });
-			    	 return bt;
-			          }
-			}
-		});
-
+    methods: {
+      filterNode(value, data) {
+    	  alert();
+    	  $("#iframecon").attr({
+				src : key
+			});
+        if (!value) return true;
+        return data.label.indexOf(value) !== -1;
+      }
+    }
+});
 
 /**
  * iframe自适应高度

@@ -10,7 +10,7 @@ html, body {
 
 .main {
 	width: 100%;
-	height: 100%;
+	height: 90%;
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
@@ -18,19 +18,34 @@ html, body {
 
 .a1 {
 	width: 100%;
-	height: 60px;
+	height: 10%;
 	color: #fff;
 	background-color: #369;
 	text-align: center;
 }
 
 .a2 {
-	width: 100%;
+	width: 80%;
 	height: 100%;
 	color: #fff;
-	background-color: #FFFFFF;
+	background-color: #F0F0F0;
 	text-align: center;
+	float: left;
 }
-.iframe{
-	background-color:#F0F0F0;
+
+.a3 {
+	width: 20%;
+	height: 100%;
+	color: #fff;
+	background-color: #E9eded;
+	text-align: center;
+	float: left;
+}
+
+.iframe {
+	background-color: #E9eded;
+}
+
+.bg {
+	background-color: #E9eded;
 }
