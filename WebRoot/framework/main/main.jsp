@@ -31,7 +31,7 @@
 	<div class="main">
 		<div class="a2">
 			<iframe src="<%=request.getContextPath()%>/ueditor/index.html"id="iframecon" name="iframepage" class="iframe"
-			  width="50%" height="93.7%" marginheight="0" marginwidth="0" frameborder="0" ></iframe>
+			  width="50%" height="100%" marginheight="0" marginwidth="0" frameborder="0" ></iframe>
 		</div>
 	</div>
 	<script
