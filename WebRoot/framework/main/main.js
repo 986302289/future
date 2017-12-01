@@ -6,6 +6,7 @@ var leftVm=new Vue({
 	        filterText: '',
 	        data2: [{
 	          id: 1,
+	          url:'baidu.com',
 	          label: '一级 1',
 	          children: [{
 	            id: 4,
@@ -30,13 +31,17 @@ var leftVm=new Vue({
 	          }]
 	        }, {
 	          id: 3,
-	          label: '一级 3',
+	          label: '知识案例',
 	          children: [{
 	            id: 7,
-	            label: '二级 3-1'
+	            label: 'SpringMvc',
+            	children: [{
+    	            id: 11,
+    	            label: '1'
+    	          }]
 	          }, {
 	            id: 8,
-	            label: '二级 3-2'
+	            label: 'Ajax'
 	          }]
 	        }],
 	        defaultProps: {
@@ -111,6 +116,3 @@ function open3() {
   }
 
 
-function aa(){
-	alert();
-}
