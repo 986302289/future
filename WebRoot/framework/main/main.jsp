@@ -17,12 +17,14 @@
 				style="BACKGROUND-IMAGE: url(/FMS/framework/images/logo.png); width: 175px; height: 90px"></div>
 		</DIV>
 		<DIV
-			style="BACKGROUND-IMAGE: url(/FMS/framework/images/bg_nav.gif); BACKGROUND-REPEAT: repeat-x; HEIGHT: 30px">
-			<TABLE cellSpacing=0 cellPadding=0 width="100%">
+			style="BACKGROUND-IMAGE: url(/FMS/framework/images/bg_nav.gif); BACKGROUND-REPEAT: repeat-x; HEIGHT: 30px;">
+			<TABLE cellSpacing=0 cellPadding=0 width="100%" height=100%>
 				<TBODY>
 					<TR>
-						<TD>sadad</TD>
-						<TD align=right width="70%">dsadasd</TD>
+						<TD align="center">
+						<div style="width:80%;"><span></span></div>
+						</TD>
+						<TD align=right width="85%"><div class="el-icon-refresh" onclick="onRefresh()"/>&nbsp;&nbsp;</TD>
 					</TR>
 				</TBODY>
 			</TABLE>
@@ -37,6 +39,10 @@
 				</el-input>
 				
 				<el-tree
+				v-loading="loading2"
+			    element-loading-text="拼命加载中"
+			    element-loading-spinner="el-icon-loading"
+			    element-loading-background="rgba(0, 0, 0, 0.8)"
 				  style="width:80%;margin:auto"
 				  class="filter-tree bg_color"
 				  :data="data2"

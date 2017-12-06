@@ -1,9 +1,10 @@
-
+var iframe_src="/FMS/framework/main/NewFile.html";
 var leftVm=new Vue({
 	el : '#leftContent',
 	data : function() {
 		return {
 	        filterText: '',
+	        loading2: false,
 	        data2: [{
 	          id: 1,
 	          label: '一级 1',
@@ -12,7 +13,8 @@ var leftVm=new Vue({
 	            label: '二级 1-1',
 	            children: [{
 	              id: 9,
-	              label: '三级 1-1-1'
+	              label: '百度',
+	              url:'/FMS/ueditor/index.html'
 	            }, {
 	              id: 10,
 	              label: '三级 1-1-2'
@@ -58,25 +60,22 @@ var leftVm=new Vue({
 	        return data.label.indexOf(value) !== -1;
 	      },
 	      handleNodeClick(data) {
+	    	  if(data.id==9){
+	    		  iframe_src=data.url;
+		    	  $("#iframecon").attr({
+					src : data.url
+				});
+	    	  }
   	        console.log(data);
+  	      },
+  	      ts(msg,rec){
+  	    	 this.$message({
+  	           message: msg,
+  	           type: rec
+  	         });
   	      }
   	    }
 
-// methods: {
-// filterNode:function(value, data) {
-// alert();
-// // $("#iframecon").attr({
-// // src : key
-// // });
-// if (!value) return true;
-// return data.label.indexOf(value) !== -1;
-// }
-// },
-// filterNode(value, data) {
-// if (!value) return true;
-// return data.label.indexOf(value) !== -1;
-// },
-    	      
 });
 
 //var menuVm=new Vue({
@@ -127,6 +126,9 @@ function open3() {
   }
 
 
-function aa(){
-	alert();
+function onRefresh(){
+	$("#iframecon").attr({
+		src : iframe_src
+	});
+	leftVm.ts("刷新成功","success");
 }
