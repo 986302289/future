@@ -65,6 +65,8 @@ html, body {
 
 .win10 {
 	background: url('../images/bg.gif');
+/* 	background-color:#E0E0E0; */
+
 /* 	background-size: 100% 100%; */
 	background-repeat: repeat-x;
 }

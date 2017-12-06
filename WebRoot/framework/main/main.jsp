@@ -10,7 +10,18 @@
 </head>
 <body class="win10">
 	<div class="a1">
-		
+	    <DIV style="DISPLAY: block; HEIGHT: 65%"></DIV>
+	    <DIV style="BACKGROUND-IMAGE: url(/FMS/framework/images/bg_nav.gif); BACKGROUND-REPEAT: repeat-x; HEIGHT: 30px">
+	      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+	        <TBODY>
+	          <TR>
+	            <TD>sadad
+	            </TD>
+	            <TD align=right width="70%">dsadasd</TD>
+	          </TR>
+	        </TBODY>
+	      </TABLE>
+	    </DIV>
 	</div>
 	<div class="main">
 		<div class="a3" id="leftContent">

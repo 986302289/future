@@ -62,22 +62,38 @@ var leftVm=new Vue({
   	      }
   	    }
 
-//    methods: {
-//      filterNode:function(value, data) {
-//    	  alert();
-////    	  $("#iframecon").attr({
-////				src : key
-////			});
-//        if (!value) return true;
-//        return data.label.indexOf(value) !== -1;
-//      }
-//    },
-//    	filterNode(value, data) {
-//            if (!value) return true;
-//            return data.label.indexOf(value) !== -1;
-//          },
+// methods: {
+// filterNode:function(value, data) {
+// alert();
+// // $("#iframecon").attr({
+// // src : key
+// // });
+// if (!value) return true;
+// return data.label.indexOf(value) !== -1;
+// }
+// },
+// filterNode(value, data) {
+// if (!value) return true;
+// return data.label.indexOf(value) !== -1;
+// },
     	      
 });
+
+//var menuVm=new Vue({
+//	el : '#menuId',
+//	data : function() {
+//		return {
+//	        activeIndex: '1',
+//	        activeIndex2: '1'
+//	      };
+//	},
+//	
+//
+//    methods: { handleSelect:function(key, keyPath) {
+//        console.log(key, keyPath);
+//      }}
+//
+//});
 
 /**
  * iframe自适应高度
