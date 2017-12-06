@@ -10,7 +10,9 @@
 </head>
 <body class="win10">
 	<div class="a1">
-	    <DIV style="DISPLAY: block; HEIGHT: 65%"></DIV>
+	    <DIV style="DISPLAY: block; HEIGHT: 65%">
+	      <DIV id=logo style="BACKGROUND-IMAGE: url(/FMS/framework/images/logo.png);width:175px;height:90px "></div>
+	    </DIV>
 	    <DIV style="BACKGROUND-IMAGE: url(/FMS/framework/images/bg_nav.gif); BACKGROUND-REPEAT: repeat-x; HEIGHT: 30px">
 	      <TABLE cellSpacing=0 cellPadding=0 width="100%">
 	        <TBODY>
