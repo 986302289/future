@@ -10,7 +10,7 @@ html, body {
 
 .main {
 	width: 100%;
-	height: 93%;
+	height: 87%;
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
@@ -18,19 +18,53 @@ html, body {
 
 .a1 {
 	width: 100%;
-	height: 7%;
+	height: 13%;
 	color: #fff;
-	background-color: #369;
+/* 	background-color: #369; */
 	text-align: center;
 }
 
 .a2 {
-	width: 100%;
+	width: 85%;
 	height: 100%;
 	color: #fff;
-	background-color: #FFFFFF;
+/* 	background-color: #F0F0F0; */
 	text-align: center;
+	float: left;
+	
 }
-.iframe{
-	background-color:#F0F0F0;
+
+.a3 {
+	width: 15%;
+	height: 100%;
+/* 	color: #fff; */
+/* 	background-color: #E9eded; */
+	text-align: center;
+	float: left;
+/* 	padding:20px 20px 20px 20px; */
+ 	border-radius: 15px;
+ 	
+}
+.a4 {
+	width: 94%;
+	height: 96%;
+	color: #fff;
+	background-color: #E9eded;
+	text-align: center;
+	float: left;
+	margin:2% 3% 2% 3%;
+}
+.iframe {
+	background-color: #E9eded;
+	border-radius: 15px;
+}
+
+.bg {
+	background-color: #E9eded;
+}
+
+.win10 {
+	background: url('../images/bg.gif');
+/* 	background-size: 100% 100%; */
+	background-repeat: repeat-x;
 }

@@ -8,30 +8,33 @@
 <link  href="<%=request.getContextPath()%>/framework/element/index.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/framework/main/main.css">
 </head>
-<body>
+<body class="win10">
 	<div class="a1">
-		<div id="mainapp">
-			<el-menu 
-			align="center"
-			  :default-active="activeIndex2"
-			  class="el-menu-demo"
-			  mode="horizontal"
-			 @select="onclickMenu"
-		>
-			  <el-submenu index="2" style="margin-left: 23.95%;">
-			    <template slot="title">选项1</template>
-			    <el-menu-item index="2-1">选项1</el-menu-item>
-			    <el-menu-item index="2-2">选项2</el-menu-item>
-			    <el-menu-item index="2-3">选项3</el-menu-item>
-			  </el-submenu>
-<!-- 			  <el-menu-item index="3"><a href="https://www.ele.me" target="_blank">选项1</a></el-menu-item> -->
-			</el-menu>
-		</div>
+		
 	</div>
 	<div class="main">
+		<div class="a3" id="leftContent">
+				<el-input 
+				  style="width:80%;margin:0px 0px 5px 0px"
+				  placeholder="输入关键字进行过滤"
+				  v-model="filterText">
+				</el-input>
+				
+				<el-tree
+				  style="width:80%;margin:auto"
+				  class="filter-tree bg"
+				  :data="data2"
+				  :props="defaultProps"
+				  accordion
+				  :filter-node-method="filterNode"
+				  @node-click="handleNodeClick"
+				  ref="tree2">
+				</el-tree>
+		</div>
 		<div class="a2">
-			<iframe src="<%=request.getContextPath()%>/ueditor/index.html"id="iframecon" name="iframepage" class="iframe"
-			  width="50%" height="100%" marginheight="0" marginwidth="0" frameborder="0" ></iframe>
+			<iframe src="<%=request.getContextPath()%>/framework/main/NewFile.html"id="iframecon" name="iframepage" class="iframe"
+			  width="100%" height="99%" marginheight="0" marginwidth="0" frameborder="0" ></iframe>
+<!-- 			  allowtransparency="true" -->
 		</div>
 	</div>
 	<script
